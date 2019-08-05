@@ -22,7 +22,7 @@ authors:
     sal:
       name:           YLD
       site:           https://www.yanglidong.com
-      avatar:         /assets/images/mymylogo.png.jpg
+      avatar:         /assets/images/mymylogo.png
       bio:            "Hi, I am Sal, the author of YLD, the theme you're currently previewing. I hope you like it!"
       email:          aiyld@hotmail.com
       twitter:        https://twitter.com/wowthemesnet
@@ -36,7 +36,7 @@ defaults:
     values:
       layout: post
       author: sal
-      avatar: /assets/images/mymylogo.png.jpg
+      avatar: /assets/images/mymylogo.png
       
   # all pages
   - scope:
