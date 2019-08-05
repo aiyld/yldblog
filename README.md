@@ -1,17 +1,17 @@
-# Jekyll Theme - Mundana by WowThemes.net
+# Jekyll Theme - YLD by WowThemes.net
 
 [Live Demo](https://wowthemesnet.github.io/yldblog/) &nbsp; | &nbsp; 
 [Download](https://github.com/wowthemesnet/yldblog/archive/master.zip) &nbsp; | &nbsp; 
 [Buy me a coffe](https://www.wowthemes.net/donate/) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/bootstrap-templates/yldblog/) &nbsp; | &nbsp; 
-[WordPress version](https://www.wowthemes.net/themes/mundana-wordpress/) 
+[WordPress version](https://www.wowthemes.net/themes/YLD-wordpress/) 
 
-![mundana jekyll theme screenshot](assets/images/screenshot.jpg)
+![YLD jekyll theme screenshot](assets/images/screenshot.jpg)
 
 ### Documentation
 
 [How to install & use](https://bootstrapstarter.com/bootstrap-templates/yldblog/)
 
-### Contribute to Mundana repository
+### Contribute to YLD repository
 
 1. In the top-right corner of this page, click **Fork**.
 

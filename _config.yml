@@ -1,6 +1,6 @@
 # Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
+name: 'YLD'
+description: 'YLD is a free Jekyll theme for awesome people like you, Medium like.'
 logo: 'assets/images/mylogo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: '/yldblog'
@@ -23,7 +23,7 @@ authors:
       name:           YLD
       site:           https://www.yanglidong.com
       avatar:         /assets/images/mymylogo.png.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+      bio:            "Hi, I am Sal, the author of YLD, the theme you're currently previewing. I hope you like it!"
       email:          aiyld@hotmail.com
       twitter:        https://twitter.com/wowthemesnet
  
