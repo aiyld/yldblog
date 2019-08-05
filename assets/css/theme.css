@@ -7,7 +7,7 @@ body {
 	padding-top:69.75px;
 }
 .site-content {
-	margin-top:40px;
+	margin-top:60px;
 	min-height:400px;
 }
 .remove-site-content-margin {
@@ -190,6 +190,9 @@ a.text-dark:hover {
 .navbar {
 	transition:top 0.2s ease-in-out;
 	font-weight:400;
+	border-bottom: 1px solid rgba(30, 35, 42, 0.06);
+	box-shadow: 0 1px 3px 0 rgba(0, 34, 77, 0.05);
+	background-clip: content-box;
 }
 .navbar .highlight .nav-link {
 	color:#03a87c !important;
