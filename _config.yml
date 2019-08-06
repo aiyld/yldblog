@@ -19,13 +19,13 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    sal:
+    yld:
       name:           YLD
       site:           https://www.yanglidong.com
       avatar:         assets/images/mylogo.png
-      bio:            "Hi, I am Sal, the author of YLD, the theme you're currently previewing. I hope you like it!"
+      bio:            "Hi, 我是YLD，也可以叫我Winter，一个在冬天降生的Boy。一个天真执着的程序员，遨游于代码的星辰大海!"
       email:          aiyld@hotmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      twitter:        https://twitter.com/yang_ld
  
 # Defaults
 defaults:
@@ -35,7 +35,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
+      author: yld
       avatar: assets/images/mylogo.png
       
   # all pages
