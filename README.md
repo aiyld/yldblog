@@ -1,15 +1,10 @@
 # Jekyll Theme - YLD by WowThemes.net
 
-[Live Demo](https://wowthemesnet.github.io/yldblog/) &nbsp; | &nbsp; 
-[Download](https://github.com/wowthemesnet/yldblog/archive/master.zip) &nbsp; | &nbsp; 
-[Buy me a coffe](https://www.wowthemes.net/donate/) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/bootstrap-templates/yldblog/) &nbsp; | &nbsp; 
-[WordPress version](https://www.wowthemes.net/themes/YLD-wordpress/) 
+[Live Demo](https://www.yanglidong.com) &nbsp; | &nbsp; 
+[Download](https://github.com/aiyld/yldblog/archive/master.zip) &nbsp; | &nbsp; 
+[Buy me a coffe](https://www.yanglidong.com/buy-me-a-coffee.html) &nbsp; | &nbsp; 
 
 ![YLD jekyll theme screenshot](assets/images/screenshot.jpg)
-
-### Documentation
-
-[How to install & use](https://bootstrapstarter.com/bootstrap-templates/yldblog/)
 
 ### Contribute to YLD repository
 
@@ -36,16 +31,3 @@
 6. Submit your changes for review. Go to your repository on GitHub, you'll see a **Compare & pull request** button. Click on that button. Now submit the pull request.
 
 That's it! Soon I'll be merging your changes into the master branch of this project. You will get a notification email once the changes have been merged. Thank you for your contribution.
-
-
-### Copyright
-
-Copyright (C) 2019 WowThemes.net.
-
-Theme designed and developed by [Sal](https://www.wowthemes.net), *free* under MIT license. 
-
-<a href="https://www.wowthemes.net/donate/" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-
-### Live Demo
-
-[Live Demo](https://wowthemesnet.github.io/yldblog/)
