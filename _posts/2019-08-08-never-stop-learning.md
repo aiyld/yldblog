@@ -4,7 +4,6 @@ title:  "永远不要停止学习"
 categories: [ 随笔 ]
 image: assets/images/posts/goodstudy.jpeg
 author: yld
-tag: sticky
 ---
 
 无论什么时候，学习都是一个永恒的话题。正所谓活到老学到老，为什么要学习，因为在天黑的时候，知识的光亮能够指引我们找到出路。
