@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  "欢迎来到YLD的世界"
+title:  "代码：缘起"
 categories: [ 随笔 ]
 image: assets/images/posts/winter.jpeg
+author: yld
 ---
-
-Hello， 我是YLD，Winter也是我啦。一个在冬天降生的BOY，又是一个天真执着的程序员，技术宅，技术痴，努力奋斗，渴望逆天改命的人。
 
 为什么会成为程序员，这还得从高考填报志愿说起...
 
