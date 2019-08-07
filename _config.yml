@@ -1,6 +1,6 @@
 # Site
 name: 'YLD'
-description: 'YLD is a free Jekyll theme for awesome people like you, Medium like.'
+description: 'YLD的个人网站。YLD，又名Winter，冬天降生的BOY，天真执着的程序员，技术宅，技术痴，努力逆天改命者。'
 logo: 'assets/images/mylogo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: '/'
@@ -20,10 +20,10 @@ plugins:
   
 authors:
     yld:
-      name:           YLD
+      name:           YLD(Winter)
       site:           https://www.yanglidong.com
       avatar:         assets/images/mylogo.png
-      bio:            "Hi, 我是YLD，也可以叫我Winter，一个在冬天降生的Boy。一个天真执着的程序员，遨游于代码的星辰大海!"
+      bio:            "Hi, 我是YLD，也可以叫我Winter，冬天降生的Boy。一个天真执着的程序员，遨游于代码的星辰大海!"
       email:          aiyld@hotmail.com
       twitter:        https://twitter.com/yang_ld
  
