@@ -10,7 +10,7 @@ permalink: "/buy-me-a-coffee.html"
           <div class="p-4 border rounded">
             <div class="row">
               <div class="col-md-2 mb-4 mb-md-0">
-                <img alt="{{reward[1].name}}" src="{{site.baseurl}}/{{ reward[1].logo }}" class="rounded-circle" height="40" width="40">
+                <img alt="{{reward[1].name}}" src="{{site.baseurl}}/{{ reward[1].logo }}" height="40" width="40">
               </div>
               <div class="col-md-10">
                 <div>
