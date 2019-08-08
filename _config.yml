@@ -32,12 +32,15 @@ rewards:
   btc:
     name: BTC
     addr: "17LB9ZCzvbGDZzYoUV2RPTX3E88y7pxthi"
+    logo: 'assets/images/btc.png'
   bch:
     name: BCH
     addr: "17LB9ZCzvbGDZzYoUV2RPTX3E88y7pxthi"
+    logo: 'assets/images/bch.jpg'
   ETH:
     name: ETH
     addr: "0x2b3246b2f13e586839d9dcb173f5c6cffaf46930"
+    logo: 'assets/images/eth.png'
 
 # Defaults
 defaults:
