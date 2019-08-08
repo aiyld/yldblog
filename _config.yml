@@ -28,6 +28,17 @@ authors:
       twitter:        https://twitter.com/yang_ld
       sina:           https://weibo.com/myyld
  
+rewards:
+  btc:
+    name: BTC
+    addr: "17LB9ZCzvbGDZzYoUV2RPTX3E88y7pxthi"
+  bch:
+    name: BCH
+    addr: "17LB9ZCzvbGDZzYoUV2RPTX3E88y7pxthi"
+  ETH:
+    name: ETH
+    addr: "0x2b3246b2f13e586839d9dcb173f5c6cffaf46930"
+
 # Defaults
 defaults:
 
