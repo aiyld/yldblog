@@ -4,7 +4,7 @@ permalink: "/contact.html"
 ---
 
 <div id="messuccess" class="alert alert-primary alert-dismissible fade show" role="alert" style="display: none">
-  <span>发行成功！</span>
+  <span>发送成功！</span>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
