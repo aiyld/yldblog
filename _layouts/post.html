@@ -90,15 +90,36 @@ layout: default
             <!-- Mailchimp Subscribe Form -->
 			{% if site.mailchimp-list %}
 			<script>
+				(function($){ 
+			        $.fn.serializeJson=function(){ 
+			          var serializeObj={}; 
+			          var array=this.serializeArray(); 
+			          var str=this.serialize(); 
+			          $(array).each(function(){ 
+			            if(serializeObj[this.name]){ 
+			              if($.isArray(serializeObj[this.name])&&this .value!=""){ 
+			                serializeObj[this.name].push(this.value); 
+			              }else { 
+			                  if(this .value!=""){
+			                      serializeObj[this.name]=[serializeObj[this.name],this.value]; 
+			                  }           
+			              } 
+			            }else{ 
+			                if(this .value!=""){
+			                     serializeObj[this.name]=this.value; 
+			                }          
+			            } 
+			          }); 
+			          return serializeObj; 
+			        }; 
+			      })(jQuery);
 				function submitSubForm() {
-					var form = document.getElementById('subsupload'),
-					formData = new FormData(form);
+					var form = $('#subsupload').serializeJson();
 					$.ajax({
-						url:"{{site.mailchimp-list}}",
-						type:"post",
-						data:formData,
-						processData:false,
-						contentType:false,
+						url:"https://www.samyoc.com/yoc/message?action=subscribe",
+						type:"POST",
+						data:form,
+						dataType: "json",
 						done: function (res) {
 						},
 						success:function(res){
@@ -107,7 +128,6 @@ layout: default
 						error:function(err){
 						}
 					});
-
 					return false;
 				}
 			</script>

@@ -3,7 +3,7 @@ title: "联系勾搭"
 permalink: "/contact.html"
 ---
 
-<div id="subssuccess" class="alert alert-primary alert-dismissible fade show" role="alert" style="display: none">
+<div id="messuccess" class="alert alert-primary alert-dismissible fade show" role="alert" style="display: none">
   <span>发行成功！</span>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -11,19 +11,40 @@ permalink: "/contact.html"
 </div>
 
 <script>
+  (function($){ 
+        $.fn.serializeJson=function(){ 
+          var serializeObj={}; 
+          var array=this.serializeArray(); 
+          var str=this.serialize(); 
+          $(array).each(function(){ 
+            if(serializeObj[this.name]){ 
+              if($.isArray(serializeObj[this.name])&&this .value!=""){ 
+                serializeObj[this.name].push(this.value); 
+              }else { 
+                  if(this .value!=""){
+                      serializeObj[this.name]=[serializeObj[this.name],this.value]; 
+                  }           
+              } 
+            }else{ 
+                if(this .value!=""){
+                     serializeObj[this.name]=this.value; 
+                }          
+            } 
+          }); 
+          return serializeObj; 
+        }; 
+      })(jQuery);
   function submitMessageForm() {
-    var form = document.getElementById('messageForm'),
-    formData = new FormData(form);
+    var form = $('#messageForm').serializeJson();
     $.ajax({
       url:"https://www.samyoc.com/yoc/message?action=add",
-      type:"post",
-      data:formData,
-      processData:false,
-      contentType:false,
+      type:"POST",
+      data:form,
+      dataType: "json",
       done: function (res) {
       },
       success:function(res){
-        $("#subssuccess").show();
+        $("#messuccess").show();
       },
       error:function(err){
       }
