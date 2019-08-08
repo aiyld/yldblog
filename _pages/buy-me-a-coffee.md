@@ -4,7 +4,6 @@ permalink: "/buy-me-a-coffee.html"
 ---
 
 <div class="container">
-<h4 class="font-weight-bold spanborder"><span>{{page.title}}</span></h4>
     <div class="row gap-y listrecent listrecent listauthor">
     {% for reward in site.rewards %}
         <div class="col-lg-6 mb-4">
