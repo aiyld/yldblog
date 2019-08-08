@@ -1,5 +1,5 @@
 ---
-title: "请作者喝杯咖啡呀"
+title: "Buy me a coffee"
 permalink: "/buy-me-a-coffee.html"
 ---
 
