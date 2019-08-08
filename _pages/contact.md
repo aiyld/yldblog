@@ -3,7 +3,37 @@ title: "联系勾搭"
 permalink: "/contact.html"
 ---
 
-<form action="https://www.samyoc.com/yoc/message?action=add" method="POST">    
+<div id="subssuccess" class="alert alert-primary alert-dismissible fade show" role="alert" style="display: none">
+  <span>发行成功！</span>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<script>
+  function submitMessageForm() {
+    var form = document.getElementById('messageForm'),
+    formData = new FormData(form);
+    $.ajax({
+      url:"https://www.samyoc.com/yoc/message?action=add",
+      type:"post",
+      data:formData,
+      processData:false,
+      contentType:false,
+      done: function (res) {
+      },
+      success:function(res){
+        $("#subssuccess").show();
+      },
+      error:function(err){
+      }
+    });
+
+    return false;
+  }
+</script>
+
+<form id="messageForm" method="POST" onsubmit="return submitMessageForm();">    
 <p class="mb-4">请在此发送消息，我会尽快回复!</p>
 <div class="form-group row">
 <div class="col-md-6">

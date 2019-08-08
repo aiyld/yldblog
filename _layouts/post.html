@@ -81,7 +81,7 @@ layout: default
 			</div>
  
 			<div id="subssuccess" class="alert alert-primary alert-dismissible fade show" role="alert" style="display: none">
-				<span>发送成功！</span>
+				<span>订阅成功！</span>
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
@@ -107,6 +107,8 @@ layout: default
 						error:function(err){
 						}
 					});
+
+					return false;
 				}
 			</script>
 			<div class="border p-5 bg-lightblue">
