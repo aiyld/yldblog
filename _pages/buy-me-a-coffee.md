@@ -12,11 +12,14 @@ permalink: "/buy-me-a-coffee.html"
               <div class="col-md-2 mb-4 mb-md-0">
                 <img alt="{{reward[1].name}}" src="{{site.baseurl}}/{{ reward[1].logo }}" height="40" width="40">
               </div>
-              <div class="col-md-10">
+              <div class="col-md-8">
                 <div>
                   <h4 class="text-dark mb-0"> {{reward[1].name}} </h4>
-                  <div class="excerpt">{{reward[1].addr}}</div>
+                  <div class="excerpt" style="word-break: break-all;">{{reward[1].addr}}</div>
                 </div>
+              </div>
+              <div class="col-md-2" style="text-align: right;">
+                <img alt="{{reward[1].name}} QR" src="{{site.baseurl}}/{{ reward[1].qr }}" height="63" width="63">
               </div>
             </div>
           </div>
