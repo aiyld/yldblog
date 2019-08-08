@@ -19,7 +19,7 @@ permalink: "/buy-me-a-coffee.html"
                 </div>
               </div>
               <div class="col-md-3" style="text-align: right;">
-                <img alt="{{reward[1].name}} QR" src="{{site.baseurl}}/{{ reward[1].qr }}" height="63" width="63">
+                <img alt="{{reward[1].name}} QR" src="{{site.baseurl}}/{{ reward[1].qr }}" height="86" width="86">
               </div>
             </div>
           </div>
