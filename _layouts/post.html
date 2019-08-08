@@ -80,8 +80,35 @@ layout: default
 				</span>
 			</div>
  
+			<div id="subssuccess" class="alert alert-primary alert-dismissible fade show" role="alert" style="display: none">
+				<span>发送成功！</span>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
             <!-- Mailchimp Subscribe Form -->
-            {% if site.mailchimp-list %}
+			{% if site.mailchimp-list %}
+			<script>
+				function submitSubForm() {
+					var form = document.getElementById('subsupload'),
+					formData = new FormData(form);
+					$.ajax({
+						url:"{{site.mailchimp-list}}",
+						type:"post",
+						data:formData,
+						processData:false,
+						contentType:false,
+						done: function (res) {
+						},
+						success:function(res){
+							$("#subssuccess").show();
+						},
+						error:function(err){
+						}
+					});
+				}
+			</script>
 			<div class="border p-5 bg-lightblue">
 				<div class="row justify-content-between">
 					<div class="col-md-6 mb-2 mb-md-0">
@@ -90,14 +117,10 @@ layout: default
 					</div>
 					<div class="col-md-6">
 						<div class="row">
-                            <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate w-100" target="_blank" novalidate>
+                            <form id="subsupload" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate w-100" onsubmit="return submitSubForm();" novalidate>
                             <div class="mc-field-group">
-							
 								<input type="email" placeholder="邮箱地址" name="email" class="required email form-control w-100" id="mce-EMAIL" autocomplete="on" required>
-							
-							
 								<button type="submit" value="Subscribe" name="subscribe" class="heart btn btn-success btn-block w-100 mt-2">订阅</button>
-							
                             </div>
                             </form>
 						</div>
@@ -105,8 +128,8 @@ layout: default
 				</div>
 			</div>
             {% endif %}
-            
-            
+
+
              <!-- Author Box -->
                 {% if page.author %}				
 				<div class="row mt-5">
