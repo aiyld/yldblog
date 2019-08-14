@@ -1,10 +1,10 @@
-# Jekyll Theme - YLD by WowThemes.net
+# YLD BLOG
 
 [Live Demo](https://www.yanglidong.com) &nbsp; | &nbsp; 
 [Download](https://github.com/aiyld/yldblog/archive/master.zip) &nbsp; | &nbsp; 
 [Buy me a coffe](https://www.yanglidong.com/buy-me-a-coffee.html) &nbsp; | &nbsp; 
 
-![YLD jekyll theme screenshot](assets/images/screenshot.jpg)
+![YLD Blog screenshot](assets/images/screenshot.jpg)
 
 ### Contribute to YLD repository
 
