@@ -30,7 +30,15 @@
 
     {% include tracking-header.html %}
 
-
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?4c2ddb1820db540af541b879b523ca3b";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>            
 </head>
 
 <body class="{% if page.url == "/" %} homefirstpage {% endif %}">
