@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "This is YLD"
+title:  "I'm YLD"
 image: assets/images/posts/winteryld.jpeg
 author: yld
 tags: [ sticky ]
