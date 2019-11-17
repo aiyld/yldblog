@@ -4,7 +4,7 @@
         <div class="entry__meta">
             <span class="entry__meta-cat">
                 {% for category in post.categories %}
-                <a href="{{site.baseurl}}categories.html#{{ category | downcase }}">{{ category }}</a><span></span>
+                <a href="/categories.html#{{ category | downcase }}">{{ category }}</a><span></span>
                 {% endfor %}
             </span>
             <span class="entry__meta-date">
