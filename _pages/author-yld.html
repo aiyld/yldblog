@@ -5,25 +5,37 @@ permalink: "/author-yld.html"
 ---
 
 <div class="s-content" style="padding-top: 0;">
-    <div class="row align-items-center mb-5">
-        <div class="col-md-9">
-            <h2 class="font-weight-bold">{{page.title}} <span class="small btn btn-outline-success btn-sm btn-round"><a
+    <main class="row content__page">
+        <section class="column large-full entry format-standard">
+            <div class="content__page-header">
+
+            </div> <!-- end content__page-header -->
+        </section>
+        <div class="flexshow">
+            <div class="col-md-3 text-left">
+                <img alt="{{ site.authors.yld.name }}" src="/{{ site.authors.yld.avatar }}"
+                    class="rounded-circle" height="100" width="100">
+            </div>
+            <div style="padding-left: 30px;">
+                <h2 style="margin-bottom: 0; margin-top:50px" class="display-1">{{page.title}} <span style="height: 40px;
+                    line-height: 40px;
+                    vertical-align: top;
+                    width: 40px;
+                    padding: 0;
+                    border-radius: 50%;" class="small btn btn-outline-success btn-sm btn-round"><a
                         href="{{ site.authors.yld.twitter }}">关注</a></span></h2>
-            <p><a href="{{ site.authors.yld.site }}">{{ site.authors.yld.site }}</a></p>
-            <p class="excerpt">{{ site.authors.yld.bio }}</p>
+                <p><a href="{{ site.authors.yld.site }}">{{ site.authors.yld.site }}</a></p>
+                <p class="excerpt">{{ site.authors.yld.bio }}</p>
+            </div>
         </div>
-        <div class="col-md-3 text-right">
-            <img alt="{{ site.authors.yld.name }}" src="//{{ site.authors.yld.avatar }}"
-                class="rounded-circle" height="100" width="100">
-        </div>
-    </div>
+    </main>
     <div class="masonry-wrap">
-        <div class="masonry">
-            <div class="grid-sizer"></div>
-            {% assign posts = site.posts | where:"author","yld" %}
-            {% for post in posts %}
-            {% include article-index.html %}
-            {% endfor %}
+            <div class="masonry">
+                <div class="grid-sizer"></div>
+                {% assign posts = site.posts | where:"author","yld" %}
+                {% for post in posts %}
+                {% include article-index.html %}
+                {% endfor %}
+            </div>
         </div>
-    </div>
 </div>
