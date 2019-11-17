@@ -9,7 +9,7 @@ layout: default
 			<div class="media-wrap entry__media">
 				<div class="entry__post-thumb text-center">
 					<img style="max-height: 360px" class="rounded"
-						src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}{{ page.image }}{% endif %}"
+						src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}"
 						alt="{{ page.title }}">
 				</div>
 			</div>

@@ -32,13 +32,13 @@
   <nav class="header__nav-wrap">
 
     <ul class="header__nav">
-      <li class="current"><a href="index.html" title="">首页</a></li>
+      <li class="current"><a href="/index.html" title="">首页</a></li>
       <li class="has-children">
         <a href="#0" title="">我的文集</a>
         <ul class="sub-menu">
-          <li><a class="feature-action" href="categories.html#default" data="default">默认分组</a></li>
+          <li><a class="feature-action" href="/categories.html#default" data="default">默认分组</a></li>
           {% for category in site.categories %}
-          <li><a class="feature-action" href="categories.html#{{ category[0] | downcase }}" data="{{ category[0] | downcase }}">{{ category[0] }}({{ category[1].size }})</a></li>
+          <li><a class="feature-action" href="/categories.html#{{ category[0] | downcase }}" data="{{ category[0] | downcase }}">{{ category[0] }}({{ category[1].size }})</a></li>
           {% endfor %}
         </ul>
       </li>
@@ -46,7 +46,7 @@
         <a href="#0" title="">文章类型</a>
         <ul class="sub-menu">
           {% for tag in site.articletypes %}
-          <li><a class="type-action" href="tags.html#{{ tag | downcase }}" data="{{ tag | downcase }}">
+          <li><a class="type-action" href="/tags.html#{{ tag | downcase }}" data="{{ tag | downcase }}">
             {% include tag-index.html %}
           </a></li>
           {% endfor %}
