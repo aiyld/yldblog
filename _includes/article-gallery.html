@@ -1,0 +1,14 @@
+<article class="masonry__brick entry format-gallery animate-this">
+    <div class="entry__thumb slider">
+        <div class="slider__slides">
+            {% for gallery in post.gallery %}
+            <div class="slider__slide">
+                <img src="{{ gallery }}" 
+                srcset="{{ gallery }}" alt=""> 
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% include article-common.html %}
+</article> <!-- end article -->

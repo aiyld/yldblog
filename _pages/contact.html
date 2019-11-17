@@ -1,0 +1,133 @@
+---
+title: "联系/Contact"
+permalink: "/contact.html"
+layout: default
+---
+
+<script>
+  (function ($) {
+    $.fn.serializeJson = function () {
+      var serializeObj = {};
+      var array = this.serializeArray();
+      var str = this.serialize();
+      $(array).each(function () {
+        if (serializeObj[this.name]) {
+          if ($.isArray(serializeObj[this.name]) && this.value != "") {
+            serializeObj[this.name].push(this.value);
+          } else {
+            if (this.value != "") {
+              serializeObj[this.name] = [serializeObj[this.name], this.value];
+            }
+          }
+        } else {
+          if (this.value != "") {
+            serializeObj[this.name] = this.value;
+          }
+        }
+      });
+      return serializeObj;
+    };
+  })(jQuery);
+  function submitMessageForm() {
+    var form = $('#messageForm').serializeJson();
+    $.ajax({
+      url: "https://www.samyoc.com/yoc/message?action=add",
+      type: "POST",
+      data: form,
+      dataType: "json",
+      done: function (res) {
+      },
+      success: function (res) {
+        $("#messuccess").show();
+        $('#messageInput').val("");
+        setTimeout(() => {
+          $("#messuccess").hide();
+        }, 3000);
+      },
+      error: function (err) {
+      }
+    });
+
+    return false;
+  }
+</script>
+
+<div class="s-content content">
+  <main class="row content__page">
+    <section class="column large-full entry format-standard">
+      <div class="media-wrap">
+        <div>
+          <img src="assets/images/thumbs/contact/contact-1000.jpg" srcset="assets/images/thumbs/contact/contact-2000.jpg 2000w, 
+                    assets/images/thumbs/contact/contact-1000.jpg 1000w, 
+                    assets/images/thumbs/contact/contact-500.jpg 500w" sizes="(max-width: 2000px) 100vw, 2000px"
+            alt="">
+        </div>
+      </div>
+      <div class="content__page-header">
+        <h1 class="display-1">联系/Contact</h1>
+      </div> <!-- end content__page-header -->
+
+      <br/>
+      <section class="KolEditor"
+        style="font-family: Arial;border: 0px none;padding: 0px;position: relative;box-sizing: border-box;margin:  auto;"
+        data-tools-id="61842">
+        <section style="margin: 0px auto;">
+          <section style="color: rgb(255, 255, 255); margin-top: -30px; text-align: center; text-decoration: inherit; border-color: rgb(138, 138, 138); box-sizing: border-box; width: 100%;">
+            <section style="margin-top: 15px; box-sizing: border-box; color: inherit; text-align: left;">
+              <section
+                style="border-bottom-width: 4px; border-bottom-style: solid; width: 100%; border-color: rgb(26, 26, 26); box-sizing: border-box; color: inherit;">
+              </section>
+            </section>
+          </section>
+          <section style="color: rgb(49, 147, 105); margin-top: 28px;"
+            data-style="text-align: center; line-height: 1.2em;color: rgb(127, 127, 127);">
+            <p style="text-align: left; line-height: 1.6em;"><span
+                style="color: rgb(60, 72, 88); font-family: Roboto, Helvetica, Arial, sans-serif; font-size: 16.8px;">关于合作、企业培训、项目需求、以及技术交流联系邮箱yoc@samyoc.com，另外相关的技术分享本人将第一时间发布在有壳网及本人运营的微信公众号：samyoc，欢迎大家关注☺</span>
+            </p>
+            <section class="KolEditor" style="position: relative;" data-tools-id="47829">
+              <section
+                style="display:-webkit-flex;display:-moz-flex;display:-ms-flex;display:-o-flex;-webkit-align-items:flex-end;-moz-align-items:flex-end;-ms-align-items:flex-end;-o-align-items:flex-end;-webkit-justify-content:space-around;-moz-justify-content:space-around;-ms-justify-content:space-around;-o-justify-content:space-around;">
+                <section style="flex:1;">
+                  <section style="margin:0px 10px;text-align:center;max-width: 200px;margin:  auto;padding:  0 10px;">
+                    <img src="https://www.samyoc.com/uploads/users/3/images/1519371002431.jpg" class="KolImg"
+                      style="max-width: 100%; height: auto; margin: 0;"></section>
+                  <p style="font-size:16px;margin:10px auto;text-align:center;">微信公众号</p>
+                </section>
+                <section style="flex:1;">
+                  <section style="margin:0px 10px;text-align:center;max-width: 200px;margin:  auto;padding: 0 10px;">
+                    <img src="https://www.samyoc.com/uploads/users/3/images/1519370974665.jpg" class="KolImg"
+                      style="max-width: 100%; height: auto; margin: 0;"></section>
+                  <p style="font-size:16px;margin:10px auto;text-align:center;">微信小程序</p>
+                </section>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <br />
+      <div class="pull-quote">
+        <blockquote>
+          <p>
+            请在此发送消息，我会尽快回复！Please send a message here, I will reply as soon as possible!
+          </p>
+          <br />
+          <form id="messageForm" method="POST" onsubmit="return submitMessageForm();">
+            <label for="nameInput">请输入你的尊称</label>
+            <input id="nameInput" class="full-width" type="text" name="name" placeholder="您的大名*" required>
+            <label for="emailInput">请输入邮箱</label>
+            <input class="full-width" type="email" placeholder="test@mailbox.com" id="emailInput">
+            <label for="messageInput">请输入消息</label>
+            <textarea id="messageInput" rows="8" class="full-width" name="content" placeholder="Your message"
+              required></textarea>
+            <div id="messuccess" class="alert-box alert-box--success hideit" role="alert" style="display: none">
+              <span>发送成功！</span>
+              <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
+            </div>
+            <input class="btn--primary full-width" type="submit" value="发送">
+          </form>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+</div>

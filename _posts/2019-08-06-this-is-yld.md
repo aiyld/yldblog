@@ -3,7 +3,7 @@ layout: post
 title:  "This is YLD"
 image: assets/images/posts/winteryld.jpeg
 author: yld
-tags: [ sticky ]
+tags: [ article ]
 ---
 
 <section data-role="outer" label="Powered by 365editor" style="font-family:微软雅黑;font-size:16px;"><section class="KolEditor" style="

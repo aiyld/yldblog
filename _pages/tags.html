@@ -4,33 +4,65 @@ layout: default
 permalink: "/tags.html"
 ---
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-        <h1 class="font-weight-bold title h6 text-uppercase mb-4">Tags</h1>
-            
-        {% for tag in site.tags %} 
-        <h4 class="font-weight-bold spanborder text-capitalize" id="{{ tag[0] | downcase }}"><span>{{ tag[0] }}</span></h4>
-            
-        {% assign pages_list = tag[1] %}
-        {% for post in pages_list %}
-        {% if post.title != null %}
-          {% if group == null or group == post.group %}
-         
-            {% include main-loop-card.html %}
-          {% endif %}
-        {% endif %}
-        {% endfor %}
-        {% assign pages_list = nil %}
-        {% assign group = nil %}
+<div class="s-content" style="padding-top: 0;">
+    {% if site.tags contains 'article' %}
+      {% for tagitem in site.tags %} 
+      <header class="listing-header">
+        {% assign tag = tagitem[0] %}
+        <h1 style="padding-top: 6.4rem;" class="h2" id="{{ tag | downcase }}">
+          {% include tag-index.html %}
+        </h1>
+      </header>
 
-        {% endfor %}
+      <div class="masonry-wrap">
+          <div class="masonry">
+            <div class="grid-sizer"></div>
+            {% assign pages_list = tagitem[1] %}
+            {% for post in pages_list %}
+            {% include article-index.html %}
+            {% endfor %}
 
-        </div>
-        
-            <div class="col-md-4">
-        {% include sidebar-featured.html %}    
-    </div>
-        
-    </div>
-</div>
+            {% if tag == "article" %}
+              {% for post in site.posts %}
+                {% if post.tags.size == 0 %}
+                  {% include article-index.html %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          </div>
+      </div>
+      {% endfor %}
+    {% else %}
+      <header class="listing-header">
+        <h1 style="padding-top: 6.4rem;" class="h2" id="article">文章</h1>
+      </header>
+      <div class="masonry-wrap">
+          <div class="masonry">
+            <div class="grid-sizer"></div>
+              {% for post in site.posts %}
+                {% if post.tags.size == 0 %}
+                  {% include article-index.html %}
+                {% endif %}
+              {% endfor %}
+          </div>
+      </div>
+      {% for tagitem in site.tags %} 
+      <header class="listing-header">
+        {% assign tag = tagitem[0] %}
+        <h1 style="padding-top: 6.4rem;" class="h2" id="{{ tag | downcase }}">
+          {% include tag-index.html %}
+        </h1>
+      </header>
+
+      <div class="masonry-wrap">
+          <div class="masonry">
+            <div class="grid-sizer"></div>
+            {% assign pages_list = tagitem[1] %}
+            {% for post in pages_list %}
+            {% include article-index.html %}
+            {% endfor %}
+          </div>
+      </div>
+      {% endfor %}
+    {% endif %}
+  </div>

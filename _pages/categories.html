@@ -4,33 +4,33 @@ layout: default
 permalink: "/categories.html"
 ---
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-        <h1 class="font-weight-bold title h6 text-uppercase mb-4">文集</h1>
-            
-        {% for category in site.categories %} 
-        <h4 class="font-weight-bold spanborder text-capitalize" id="{{ category[0] | downcase }}"><span>{{ category[0] }}</span></h4>
-            
-        {% assign pages_list = category[1] %}
-        {% for post in pages_list %}
-        {% if post.title != null %}
-          {% if group == null or group == post.group %}
-         
-            {% include main-loop-card.html %}
-          {% endif %}
-        {% endif %}
-        {% endfor %}
-        {% assign pages_list = nil %}
-        {% assign group = nil %}
-
-        {% endfor %}
-
+<div class="s-content" style="padding-top: 0;">
+    {% for category in site.categories %} 
+    <header class="listing-header">
+      <h1 style="padding-top: 6.4rem;" class="h2" id="{{ category[0] | downcase }}">我的文集: {{ category[0] }}</h1>
+    </header>
+    
+    <div class="masonry-wrap">
+        <div class="masonry">
+          <div class="grid-sizer"></div>
+          {% assign pages_list = category[1] %}
+          {% for post in pages_list %}
+          {% include article-index.html %}
+          {% endfor %}
         </div>
-        
-            <div class="col-md-4">
-        {% include sidebar-featured.html %}    
     </div>
-        
-    </div>
+    {% endfor %}
+    <header class="listing-header">
+        <h1 style="padding-top: 6.4rem;" class="h2" id="default">默认分组</h1>
+      </header>
+      <div class="masonry-wrap">
+          <div class="masonry">
+            <div class="grid-sizer"></div>
+              {% for post in site.posts %}
+                {% if post.categories.size == 0 %}
+                  {% include article-index.html %}
+                {% endif %}
+              {% endfor %}
+          </div>
+      </div>
 </div>

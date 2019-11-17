@@ -3,24 +3,27 @@ title: "YLD"
 layout: default
 permalink: "/author-yld.html"
 ---
-<div class="container">
-<div class="row justify-content-center">
-    <div class="col-md-8">        
-        <div class="row align-items-center mb-5">
-            <div class="col-md-9">
-                <h2 class="font-weight-bold">{{page.title}} <span class="small btn btn-outline-success btn-sm btn-round"><a href="{{ site.authors.yld.twitter }}">关注</a></span></h2>
-                <p><a href="{{ site.authors.yld.site }}">{{ site.authors.yld.site }}</a></p>
-                <p class="excerpt">{{ site.authors.yld.bio }}</p>
-            </div>
-            <div class="col-md-3 text-right">
-                <img alt="{{ site.authors.yld.name }}" src="{{site.baseurl}}/{{ site.authors.yld.avatar }}" class="rounded-circle" height="100" width="100">
-            </div>
+
+<div class="s-content" style="padding-top: 0;">
+    <div class="row align-items-center mb-5">
+        <div class="col-md-9">
+            <h2 class="font-weight-bold">{{page.title}} <span class="small btn btn-outline-success btn-sm btn-round"><a
+                        href="{{ site.authors.yld.twitter }}">关注</a></span></h2>
+            <p><a href="{{ site.authors.yld.site }}">{{ site.authors.yld.site }}</a></p>
+            <p class="excerpt">{{ site.authors.yld.bio }}</p>
         </div>
-        <h4 class="font-weight-bold spanborder"><span>文章</span></h4>
+        <div class="col-md-3 text-right">
+            <img alt="{{ site.authors.yld.name }}" src="{{site.baseurl}}/{{ site.authors.yld.avatar }}"
+                class="rounded-circle" height="100" width="100">
+        </div>
+    </div>
+    <div class="masonry-wrap">
+        <div class="masonry">
+            <div class="grid-sizer"></div>
             {% assign posts = site.posts | where:"author","yld" %}
             {% for post in posts %}
-            {% include main-loop-card.html %}
+            {% include article-index.html %}
             {% endfor %}
+        </div>
     </div>
-</div>
 </div>

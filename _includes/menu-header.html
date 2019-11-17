@@ -1,14 +1,71 @@
-<!--  Replace menu links here -->
+<!-- site header
+        ================================================== -->
+<header class="s-header">
+  <div class="header__top">
+    <div class="header__logo">
+      <a class="site-logo" href="{{site.baseurl}}">
+        <img src="{{site.baseurl}}{{site.logo}}" alt="Homepage">
+      </a>
+    </div>
 
-<li class="nav-item">
-<a class="nav-link" href="{{site.baseurl}}/index.html">首页</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="{{site.baseurl}}/authors-list.html">关于作者</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="{{site.baseurl}}/contact.html">联系勾搭</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="{{site.baseurl}}/buy-me-a-coffee.html">Buy me a coffee <i class="fa fa-coffee text-danger"></i></a>
-</li>
+    <div class="header__search">
+
+      <form role="search" method="get" class="header__search-form" action="#">
+        <label>
+          <span class="hide-content">Search for:</span>
+          <input type="search" class="header__search-field" placeholder="Type Keywords" value="" name="s"
+            title="Search for:" autocomplete="off">
+        </label>
+        <input type="submit" class="header__search-submit" value="Search">
+      </form>
+
+      <a href="#0" title="Close Search" class="header__search-close">Close</a>
+
+    </div> <!-- end header__search -->
+
+    <!-- toggles -->
+    <a href="#0" class="header__search-trigger"></a>
+    <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
+
+  </div> <!-- end header__top -->
+
+  <nav class="header__nav-wrap">
+
+    <ul class="header__nav">
+      <li class="current"><a href="index.html" title="">首页</a></li>
+      <li class="has-children">
+        <a href="#0" title="">我的文集</a>
+        <ul class="sub-menu">
+          <li><a class="feature-action" href="categories.html#default" data="default">默认分组</a></li>
+          {% for category in site.categories %}
+          <li><a class="feature-action" href="categories.html#{{ category[0] | downcase }}" data="{{ category[0] | downcase }}">{{ category[0] }}({{ category[1].size }})</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li class="has-children">
+        <a href="#0" title="">文章类型</a>
+        <ul class="sub-menu">
+          {% for tag in site.articletypes %}
+          <li><a class="type-action" href="tags.html#{{ tag | downcase }}" data="{{ tag | downcase }}">
+            {% include tag-index.html %}
+          </a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li><a href="{{site.baseurl}}about.html" title="">关于网站/About</a></li>
+      <li><a href="{{site.baseurl}}contact.html" title="">联系/Contact</a></li>
+      <li><a href="{{site.baseurl}}buy-me-a-coffee.html" title="">打赏/Buy me a coffee</a></li>
+    </ul> <!-- end header__nav -->
+
+    <ul class="header__social flex-wrap">
+      {% for social in site.socials%}
+      <li class="ss-{{ social[0] }} white">
+        <a href="{{ social[1].url }}" target="_blank">
+          <span class="screen-reader-text">{{ social[1].name }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+
+  </nav> <!-- end header__nav-wrap -->
+</header> <!-- end s-header -->

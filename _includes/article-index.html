@@ -1,0 +1,15 @@
+{% if post.tags contains 'video' %}
+  {% include article-video.html %}
+{% elsif post.tags contains 'audio' %}
+  {% include article-audio.html %}
+{% elsif post.tags contains 'gallery' %}
+  {% include article-gallery.html %}
+{% elsif post.tags contains 'article' %}
+  {% include article-standard.html %}
+{% elsif post.tags contains 'link' %}
+  {% include article-link.html %}
+{% elsif post.tags contains 'quote' %}
+  {% include article-quote.html %}
+{% else %}
+  {% include article-standard.html %}
+{% endif %}
