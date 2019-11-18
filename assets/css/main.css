@@ -2230,6 +2230,7 @@ input::-moz-focus-inner {
   padding-right: 3.2rem;
   padding-left: 4.4rem;
   overflow-y: auto;
+  overflow-x: hidden;
   vertical-align: top;
   position: fixed;
   bottom: 0;
