@@ -2230,7 +2230,6 @@ input::-moz-focus-inner {
   padding-right: 3.2rem;
   padding-left: 4.4rem;
   overflow-y: auto;
-  overflow-x: hidden;
   vertical-align: top;
   position: fixed;
   bottom: 0;
@@ -2786,6 +2785,7 @@ body.search-is-visible {
     width: 100%;
     background: transparent;
     padding: 0;
+    position: fixed;
     position: static;
     top: 0;
     bottom: auto;
