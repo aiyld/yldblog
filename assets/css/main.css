@@ -2025,6 +2025,7 @@ input::-moz-focus-inner {
 .coffee-box .coffee-logo {
   margin: 0;
   margin-right: 10px;
+  height: 40px;
 }
 .coffee-box .coffee-qr {
   margin-left: 10px;
