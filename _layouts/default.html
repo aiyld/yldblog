@@ -6,35 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{page.title}} | {{site.name}}</title>
-
     {% seo %}
-
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/vendor.css">
     <link rel="stylesheet" href="/assets/css/main.css">
-
     <link rel="shortcut icon" type="image/x-icon" href="/{{site.favicon}}">
-
-    <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
     {% include tracking-header.html %}
-
     <script src="/assets/js/modernizr.js"></script>
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?4c2ddb1820db540af541b879b523ca3b";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 </head>
 
 <body class="{% if page.url == "/" %} homefirstpage {% endif %}">
-
     <!-- preloader
     ================================================== -->
     <div id="preloader">
@@ -57,8 +38,18 @@
 
     <!-- Java Script
     ================================================== -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="/assets/js/plugins.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?4c2ddb1820db540af541b879b523ca3b";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </body>
 
 </html>
