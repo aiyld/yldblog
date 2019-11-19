@@ -2572,10 +2572,6 @@ input::-moz-focus-inner {
   top: 6.4rem;
 }
 
-.header__search-trigger.mobile {
-  display: none;
-}
-
 .header__search-trigger::before {
   content: "";
   display: block;
@@ -2887,14 +2883,6 @@ body.search-is-visible {
     width: 20px;
     top: 29px;
     right: 9.8rem;
-  }
-
-  .header__search-trigger.mobile {
-    display: initial;
-  }
-
-  .header__search-trigger.pc {
-    display: none;
   }
 
   .header__search-trigger::before,
