@@ -16,28 +16,31 @@ Jekyll 本地调试环境搭建
 
 <li>
   <p>安装一个完整的Ruby开发环境<p>
-  <pre><code>
-	# Install Homebrew
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	brew install ruby
-  export PATH=/usr/local/opt/ruby/bin:$PATH
-  </code></pre>
+<pre><code>
+# Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install ruby
+export PATH=/usr/local/opt/ruby/bin:$PATH
+</code></pre>
   <p>其他平台访问：<a href="https://jekyllrb.com/docs/installation/macos/" target="blank">https://jekyllrb.com/docs/installation/macos/</a></p>
 </li>
 
 <li>Install Jekyll and bundler gems
-<pre><code>gem install jekyll bundler
+<pre><code>gem install jekyll bundler</code></pre>
 </li>
 
 <li>Create a new Jekyll site at ./myblog
-<pre><code>jekyll new myblog
+<pre><code>jekyll new myblog</code></pre>
 </li>
 <li>Change into your new directory
-<pre><code>cd myblog
+<pre><code>cd myblog</code></pre>
 </li>
 <li>Build the site and make it available on a local server
-<pre><code>bundle exec jekyll serve
+<pre><code>bundle exec jekyll serve</code></pre>
 </li>
+
+</ol>
+
 <p>更多详情访问：<a href="https://jekyllrb.com/docs/" target="_blank">https://jekyllrb.com/docs/</a></p>
 <pre><code>
 bundle init
@@ -45,4 +48,3 @@ bundle install
 bundle add jekyll
 bundle exec jekyll serve
 </code></pre>
-</ol>
