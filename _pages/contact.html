@@ -114,7 +114,7 @@ layout: default
           <br />
           <form id="messageForm" method="POST" onsubmit="return submitMessageForm();">
             <label for="nameInput">请输入你的尊称</label>
-            <input id="nameInput" class="full-width" type="text" name="name" placeholder="您的大名*" required>
+            <input id="nameInput" class="full-width" type="text" name="name" placeholder="Your name" required>
             <label for="emailInput">请输入邮箱</label>
             <input class="full-width" type="email" placeholder="test@mailbox.com" id="emailInput" required>
             <label for="messageInput">请输入消息</label>
@@ -124,7 +124,7 @@ layout: default
               <span>发送成功！</span>
               <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
             </div>
-            <input class="btn--primary full-width" type="submit" value="发送">
+            <input id="csubmit" class="btn--primary full-width" type="submit" value="发送">
           </form>
         </blockquote>
       </div>
