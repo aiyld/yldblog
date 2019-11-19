@@ -15,7 +15,7 @@ Jekyll 本地调试环境搭建
 <ol>
 
 <li>
-  <p>安装一个完整的Ruby开发环境</p>
+  <p>安装一个完整的Ruby开发环境，MAC环境示例：</p>
 <pre><code>
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
