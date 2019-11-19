@@ -3084,6 +3084,7 @@ body.search-is-visible {
 }
 
 .go-top.link-is-visible {
+  z-index: 9999;
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);
