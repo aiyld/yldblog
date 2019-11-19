@@ -7,7 +7,7 @@ permalink: "/categories.html"
 <div class="s-content" style="padding-top: 0;">
     {% for category in site.categories %} 
     <header class="listing-header">
-      <h1 style="padding-top: 6.4rem;" class="h2" id="{{ category[0] | downcase }}">我的文集: {{ category[0] }}</h1>
+      <h1 class="h2 list-header" id="{{ category[0] | downcase }}">我的文集: {{ category[0] }}</h1>
     </header>
     
     <div class="masonry-wrap">
@@ -21,7 +21,7 @@ permalink: "/categories.html"
     </div>
     {% endfor %}
     <header class="listing-header">
-        <h1 style="padding-top: 6.4rem;" class="h2" id="default">默认分组</h1>
+        <h1 class="h2 list-header" id="default">默认分组</h1>
       </header>
       <div class="masonry-wrap">
           <div class="masonry">

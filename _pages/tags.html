@@ -9,7 +9,7 @@ permalink: "/tags.html"
       {% for tagitem in site.tags %} 
       <header class="listing-header">
         {% assign tag = tagitem[0] %}
-        <h1 style="padding-top: 6.4rem;" class="h2" id="{{ tag | downcase }}">
+        <h1 class="h2 list-header" id="{{ tag | downcase }}">
           {% include tag-index.html %}
         </h1>
       </header>
@@ -34,7 +34,7 @@ permalink: "/tags.html"
       {% endfor %}
     {% else %}
       <header class="listing-header">
-        <h1 style="padding-top: 6.4rem;" class="h2" id="article">文章</h1>
+        <h1 class="h2 list-header" id="article">文章</h1>
       </header>
       <div class="masonry-wrap">
           <div class="masonry">
@@ -49,7 +49,7 @@ permalink: "/tags.html"
       {% for tagitem in site.tags %} 
       <header class="listing-header">
         {% assign tag = tagitem[0] %}
-        <h1 style="padding-top: 6.4rem;" class="h2" id="{{ tag | downcase }}">
+        <h1 class="h2 list-header" id="{{ tag | downcase }}">
           {% include tag-index.html %}
         </h1>
       </header>
