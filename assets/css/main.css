@@ -2229,8 +2229,8 @@ input::-moz-focus-inner {
   padding-top: 6.4rem;
   padding-right: 3.2rem;
   padding-left: 4.4rem;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-y: initial;
+  overflow-x: initial;
   vertical-align: top;
   position: fixed;
   bottom: 0;
@@ -2790,7 +2790,7 @@ body.search-is-visible {
     top: 0;
     bottom: auto;
     overflow-y: initial;
-    overflow-y: initial;
+    overflow-x: initial;
   }
 
   .header__top {
