@@ -2789,7 +2789,8 @@ body.search-is-visible {
     position: static;
     top: 0;
     bottom: auto;
-    position: initial;
+    overflow-y: initial;
+    overflow-y: initial;
   }
 
   .header__top {
