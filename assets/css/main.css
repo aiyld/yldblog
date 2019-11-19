@@ -2789,6 +2789,7 @@ body.search-is-visible {
     position: static;
     top: 0;
     bottom: auto;
+    min-height: 78px;
   }
 
   .header__top {
