@@ -51,42 +51,46 @@ layout: default
 					{% include comments.html %}
 			</div>
 
-			<div class="entry__pagenav">
+			<!-- <div class="entry__pagenav">
 				<div class="entry__nav">
 					{% if page.previous.url %}
 					<div class="entry__prev">
 						<a href="{{ page.previous.url }}" rel="prev">
 							<span>上一篇</span>
-							{{ page.previous.title }}
+							{% if page.previous.title %}
+							{{ page.previous.title}}
+							{% else %}
+							{{ page.previous.content | strip_html | strip_newlines | truncate: 50 }}
+							{% endif %}
 						</a>
 					</div>
 					{% endif %}
+					{% if page.next.url %}
 					<div class="entry__next">
 						<a href="{{ page.next.url }}" rel="next">
 							<span>下一篇</span>
-							{{page.next.title}}
+							{% if page.next.title %}
+							{{ page.next.title}}
+							{% else %}
+							{{ page.next.content | strip_html | strip_newlines | truncate: 50 }}
+							{% endif %}
 						</a>
 					</div>
+					{% endif %}
 				</div>
-			</div> <!-- end entry__pagenav -->
+			</div>-->
 
 			<div class="entry__related">
 				<h3 class="h2">相关文章</h3>
 
-				<ul class="related">
-					{% for post in site.related_posts limit:3%}
-						<li class="related__item">
-							{% if post.image %}
-							<a href="{{post.url}}" class="related__link">
-									<img src="{% if post.image contains "://" %}{{ post.image }}{% else %} /{{ post.image}}{% endif %}"
-											srcset="{% if post.image contains "://" %}{{ post.image }}{% else %} /{{ post.image}}{% endif %}"
-											alt="">
-							</a>
-							{% endif %}
-							<h5 class="related__post-title">{{ post.excerpt  | strip_html | strip_newlines | truncate: 60}}</h5>
-						</li>
-					{% endfor %}
-				</ul>
+				<div class="masonry-wrap">
+					<div class="masonry">
+							<div class="grid-sizer"></div>
+							{% for post in site.related_posts limit:4%}
+							{% include article-index.html %}
+							{% endfor %}
+					</div>
+				</div>
 			</div> <!-- end entry related -->
 		</article> <!-- end column large-full entry-->
 	</main>
