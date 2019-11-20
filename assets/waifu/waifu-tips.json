@@ -29,7 +29,7 @@
             "text": ["要吐槽些什么呢"]
         },
         {
-            "selector": "#go-top",
+            "selector": ".go-top",
             "text": ["回到开始的地方吧"]
         },
         {
