@@ -25,7 +25,7 @@
     var ssPreloader = function() {
         
         $("html").addClass('ss-preload');
-
+        var loaded = false;
         var pretime = setTimeout(()=>{
             $("#loader").fadeOut("slow", function() {
                 // will fade out the whole DIV that covers the website.
@@ -33,11 +33,14 @@
             }); 
             $("html").removeClass('ss-preload');
             $("html").addClass('ss-loaded');
+            loaded = true;
         }, 4000);
 
         $WIN.on('load', function() {
             clearTimeout(pretime);
-
+            if(loaded) {
+                return;
+            }
             //force page scroll position to top at page refresh
             // $('html, body').animate({ scrollTop: 0 }, 'normal');
 
@@ -175,11 +178,25 @@
    /* animate bricks
     * ------------------------------------------------------ */
     var ssBricksAnimate = function() {
-
+        var loaded = false;
         var animateEl = $('.animate-this');
-
+        var bricksTimer = setTimeout(() => {
+            setTimeout(function() {
+                animateEl.each(function(ctr) {
+                    var el = $(this);
+                    
+                    setTimeout(function() {
+                        el.addClass('animated');
+                    }, ctr * 200);
+                });
+            }, 300);
+            loaded = true;
+        }, 4000);
         $WIN.on('load', function() {
-
+            clearTimeout(bricksTimer);
+            if(loaded) {
+                return;
+            }
             setTimeout(function() {
                 animateEl.each(function(ctr) {
                     var el = $(this);
