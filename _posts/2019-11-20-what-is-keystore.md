@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "什么是KeyStore"
+title:  "什么是KeyStore？KeyStore加解密详解"
 categories: [ 区块链 ]
 author: yld
 tag: article
@@ -70,6 +70,10 @@ marks: ["前端", "源代码", "区块链", "钱包", "KeyStore", "加密算法"
 <dd>用于验证密码的正确及验证ciphertext是否原装未经过修改；它通过产生的<strong>中间秘钥</strong>和<strong>ciphertext</strong>，经过SHA3哈希算法最终得到。</dd>
 </dl>
 
+<div class="text-center">
+<img src="/assets/images/posts/keystore.png"/>
+</div>
+
 <p>上述KeyStore的密码和待加密的信息如下：</p>
 <ul>
 <li>密码：testpassword</li>
@@ -83,3 +87,6 @@ marks: ["前端", "源代码", "区块链", "钱包", "KeyStore", "加密算法"
 <li>MAC: 517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2</li>
 <li>Cipher key: f06d69cdc7da0faffb1008270bca38f5</li>
 </ul>
+
+<p>相关文档：</p>
+<p>Web3 Secret Storage Definition: <a href="https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition" target="_blank">https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition</a></p>
