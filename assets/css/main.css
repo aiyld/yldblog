@@ -284,7 +284,7 @@ code {
 pre > code {
   display: block;
   white-space: pre;
-  line-height: 2;
+  line-height: 1.5;
   padding: 0;
   margin: 0;
 }
