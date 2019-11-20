@@ -21,7 +21,7 @@ body {
 body {
   background: #f6f7f8;
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: normal;
   line-height: 1.789;
@@ -994,11 +994,11 @@ input::-moz-focus-inner {
 .drop-cap:first-letter {
   float: left;
   margin: 0;
-  padding: 1.6rem 0.8rem 0 0;
+  padding: 0.8rem 0.8rem 0.8rem 0;
   font-family: "Lora", serif;
   font-weight: 700;
-  font-size: 8.6rem;
-  line-height: 6rem;
+  font-size: 8rem;
+  line-height: 5.5rem;
   text-indent: 0;
   background: transparent;
   color: #000000;
