@@ -1,6 +1,6 @@
 # Site
-name: 'YLD is Winter 凛冬将至'
-description: 'YLD的个人网站。YLD，又名Winter，冬天降生的BOY，天真执着的程序员，技术宅，技术痴，努力逆天改命。'
+name: '凛冬将至'
+description: '杨利东的个人网站。英文名Winter，也可以直接叫我YLD。天真执着的程序员，技术宅，技术痴，终日遨游于代码的星辰大海!'
 logo: 'assets/images/mylogo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: '/'
@@ -22,10 +22,11 @@ articletypes: ["article", "quote", "video", "gallery", "audio", "link"]
 
 authors:
     yld:
-      name:           YLD
+      name:           杨利东
+      link:           author-yld
       site:           https://www.yanglidong.com
       avatar:         assets/images/mylogo.png
-      bio:            "Hi, 我是YLD，也可以叫我Winter，冬天降生的Boy。一个天真执着的程序员，遨游于代码的星辰大海!"
+      bio:            "Hi, 我是杨利东，英文名Winter，也可以直接叫我YLD。一个天真执着的程序员，技术宅，技术痴，终日遨游于代码的星辰大海!"
       email:          aiyld@hotmail.com
       twitter:        https://twitter.com/yang_ld
       sina:           https://weibo.com/myyld

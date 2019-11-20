@@ -71,6 +71,7 @@ marks: ["前端", "源代码", "区块链", "钱包", "KeyStore", "加密算法"
 <dd>用于验证密码的正确及验证ciphertext是否原装未经过修改；它通过产生的<strong>中间秘钥</strong>和<strong>ciphertext</strong>，经过SHA3哈希算法最终得到。</dd>
 </dl>
 
+<h3>下面是它们的推导过程和联系</h3>
 <div class="text-center">
 <img src="/assets/images/posts/keystore.png"/>
 </div>
