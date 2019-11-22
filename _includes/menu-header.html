@@ -1,3 +1,43 @@
+<script>
+  {% assign counter = 0 %}
+  {% assign videoCounter = 0 %}
+  {% assign audioCounter = 0 %}
+  {% assign galleryCounter = 0 %}
+  {% assign linkCounter = 0 %}
+  {% assign quoteCounter = 0 %}
+  {% assign articleCounter = 0 %}
+  var sitePosts = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}{
+      "id": {{ counter }},
+      "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
+      "title": "{{ page.title }}",
+      "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+      }, {% endif %}{% endfor %}{% for page in site.without-plugin %}{
+      "id": {{ counter }},
+      "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
+      "title": "{{ page.title }}",
+      "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+      }, {% endfor %}{% for postitem in site.posts %}{
+        {% if postitem.tags contains 'video' %}
+        {% assign videoCounter = videoCounter | plus: 1 %}
+        {% elsif postitem.tags contains 'audio' %}
+        {% assign audioCounter = audioCounter | plus: 1 %}
+        {% elsif postitem.tags contains 'gallery' %}
+        {% assign galleryCounter = galleryCounter | plus: 1 %}
+        {% elsif postitem.tags contains 'link' %}
+        {% assign linkCounter = linkCounter | plus: 1 %}
+        {% elsif postitem.tags contains 'quote' %}
+        {% assign quoteCounter = quoteCounter | plus: 1 %}
+        {% else %}
+        {% assign articleCounter = articleCounter | plus: 1 %}
+        {% endif %}
+      "id": {{ counter }},
+      "url": "{{ site.url }}{{site.baseurl}}{{ postitem.url }}",
+      "title": "{{ postitem.title }}",
+      "post": true,
+      "body": "{{ postitem.date | date: "%Y/%m/%d" }} - {{ postitem.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
+      }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
+</script>
+
 <!-- site header
         ================================================== -->
 <header class="s-header">
@@ -10,14 +50,13 @@
 
     <div class="header__search">
 
-      <form role="search" method="get" class="header__search-form" action="#">
+      <div role="search" method="get" class="header__search-form" action="#">
         <label>
-          <span class="hide-content">Search for:</span>
-          <input type="search" class="header__search-field" placeholder="Type Keywords" value="" name="s"
-            title="Search for:" autocomplete="off">
+          <span class="hide-content">搜索</span>
+          <input type="search" class="header__search-field" placeholder="请输入关键字" value="" name="s"
+            title="搜索" autocomplete="off">
         </label>
-        <input type="submit" class="header__search-submit" value="Search">
-      </form>
+      </div>
 
       <a href="#0" title="Close Search" class="header__search-close">Close</a>
 

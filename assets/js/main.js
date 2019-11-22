@@ -73,7 +73,7 @@
     var ssSearch = function() {
             
         var searchWrap = $('.header__search'),
-            searchField = searchWrap.find('.search-field'),
+            searchField = searchWrap.find('.header__search-field'),
             closeSearch = searchWrap.find('.header__search-close'),
             searchTrigger = $('.header__search-trigger'),
             siteBody = $('body');
@@ -88,7 +88,7 @@
         
             siteBody.addClass('search-is-visible');
             setTimeout(function(){
-                searchWrap.find('.search-field').focus();
+                searchWrap.find('.header__search-field').focus();
             }, 100);
         
         });
@@ -102,13 +102,14 @@
             if(siteBody.hasClass('search-is-visible')){
                 siteBody.removeClass('search-is-visible');
                 setTimeout(function(){
-                    searchWrap.find('.search-field').blur();
+                    searchWrap.find('.header__search-field').blur();
                 }, 100);
             }
         });
 
         searchWrap.on('click',  function(e) {
-            if( !$(e.target).is('.search-field') ) {
+            console.log(e.target);
+            if( !$(e.target).is('.header__search-field') ) {
                 closeSearch.trigger('click');
             }
         });
