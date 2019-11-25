@@ -1,6 +1,6 @@
 # Site
-name: '凛冬将至'
-description: '杨利东的个人网站。英文名Winter，也可以直接叫我YLD。天真执着的程序员，技术宅，技术痴，终日遨游于代码的星辰大海!'
+name: '杨利东的个人网站'
+description: 'YLD’s zone，杨利东的个人网站。英文名Winter，也可以直接叫我YLD。天真执着的程序员，技术宅，技术痴，终日遨游于代码的星辰大海!'
 logo: 'assets/images/mylogo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: '/'
