@@ -81,10 +81,6 @@
             "text": ["去下一页看看吧"]
         },
         {
-            "selector": ".header__nav",
-            "text": ["这里是菜单，要来点什么‘菜’呢~"]
-        },
-        {
             "selector": "c-player a.play-icon",
             "text": ["想要听点音乐吗"]
         },
