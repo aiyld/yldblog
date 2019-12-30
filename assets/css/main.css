@@ -2767,14 +2767,14 @@ body.search-is-visible {
  * ------------------------------------------------------------------- */
 @media screen and (max-width:1600px) {
   .s-header {
-    width: 230px;
+    width: 260px;
   }
 
 }
 
 @media screen and (max-width:1200px) {
   .s-header {
-    width: 270px;
+    width: 230px;
     padding-right: 2.8rem;
     padding-left: 4rem;
   }
@@ -3110,7 +3110,7 @@ body.search-is-visible {
 @media screen and (max-width:1200px) {
   .s-content,
   .s-footer {
-    padding-left: 230px;
+    padding-left: 260px;
     padding-right: 80px;
   }
 
