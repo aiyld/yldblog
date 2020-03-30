@@ -34,7 +34,7 @@
             $("html").removeClass('ss-preload');
             $("html").addClass('ss-loaded');
             loaded = true;
-        }, 4000);
+        }, 1000);
 
         $WIN.on('load', function() {
             clearTimeout(pretime);
