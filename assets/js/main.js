@@ -120,6 +120,27 @@
             
         searchField.attr({placeholder: 'Type Keywords', autocomplete: 'off'});
 
+        searchField.bind('keypress',function(event){
+            if(event.keyCode == "13"){
+                var searchText = searchField.val();
+                var finded = 0;
+                document.querySelectorAll('#searchResult ul')[0].innerHTML = '';
+                for (var i = 0; i < sitePosts.length; i++) {
+                    if(sitePosts[i].title.toLowerCase().includes(searchText.toLowerCase()) || sitePosts[i].body.toLowerCase().includes(searchText.toLowerCase())) {
+                        finded ++;
+                        var ref = sitePosts[i]['ref'];
+                        var url = sitePosts[i]['url'];
+                        var title = sitePosts[i]['title'];
+                        var body = sitePosts[i]['body'].substring(0,160)+'...';
+                        document.querySelectorAll('#searchResult ul')[0].innerHTML = document.querySelectorAll('#searchResult ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><small><span class='body'>"+ body +"</span><br /><span class='url'>"+ url +"</span></small></a></li>";
+                    }
+                }
+
+                if(finded === 0) {
+                    document.querySelectorAll('#searchResult ul')[0].innerHTML = "<li class='searchResult'>Sorry, no results found. Close & try a different search!</li>";
+                }
+            }
+        });
     };
 
 

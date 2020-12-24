@@ -1,3 +1,23 @@
+<style>
+  #searchResult {
+    text-align: left;
+    margin-top: 0;
+    position: absolute;
+    top: 250px;
+    bottom: 50px;
+    overflow-y: auto;
+    left: 20px;
+    right: 20px;
+  }
+  #searchResult ul {
+    list-style: none;
+  }
+  .lunrsearchresult .title {color: #d9230f;}
+  .lunrsearchresult .url {color: silver;}
+  .lunrsearchresult a {display: block; color: #777;}
+  .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+  .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
 <script>
   {% assign counter = 0 %}
   {% assign videoCounter = 0 %}
@@ -49,7 +69,6 @@
     </div>
 
     <div class="header__search">
-
       <div role="search" method="get" class="header__search-form" action="#">
         <label>
           <span class="hide-content">搜索</span>
@@ -57,6 +76,8 @@
             title="搜索" autocomplete="off">
         </label>
       </div>
+
+      <div id="searchResult"><ul></ul></div>
 
       <a href="#0" title="Close Search" class="header__search-close">Close</a>
 
