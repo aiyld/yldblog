@@ -51,12 +51,12 @@ socials:
 rewards:
   btc:
     name: BTC
-    addr: "17LB9ZCzvbGDZzYoUV2RPTX3E88y7pxthi"
+    addr: "1GuUXQ8XQxAurvCBe4vM3qSkqs9ieenKpe"
     logo: 'assets/images/btc.png'
     qr: 'assets/images/btc-qr.png'
   bch:
-    name: BCH
-    addr: "17LB9ZCzvbGDZzYoUV2RPTX3E88y7pxthi"
+    name: BCH(CashAddr)
+    addr: "qzh8vl3yj29ecugq4fup027d3eqynaalaugvhmpvge"
     logo: 'assets/images/bch.jpg'
     qr: 'assets/images/bch-qr.png'
   ETH:
