@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "This is YLD"
-image: assets/images/posts/winteryld.jpeg
+image: https://www.samyoc.com/img/author.jpg
 author: yld
 tags: [ article ]
 ---
