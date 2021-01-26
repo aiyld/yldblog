@@ -1,9 +1,9 @@
 <article class="masonry__brick entry format-quote">
     <div class="entry__thumb">
         <blockquote>
-            <p>{{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}</p>
+            <p><a style="color:inherit" href="{{post.url}}">{{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}</a></p>
     
-            <cite>{{post.author}}</cite>
+            <cite>{{ post.date | date: '%b %d, %Y' }}</cite>
         </blockquote>
     </div>
 </article> <!-- end article -->
