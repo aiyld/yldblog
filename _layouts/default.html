@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/vendor.css">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/waifu.css">
-    <link rel="shortcut icon" type="image/x-icon" href="/{{site.favicon}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/{{site.favicon}}">
     {% include tracking-header.html %}
-    <script src="/assets/js/modernizr.js"></script>
+    <script src="{{site.baseurl}}/assets/js/modernizr.js"></script>
 </head>
 
 <body class="{% if page.url == "/" %} homefirstpage {% elsif page.layout == "post" %} ss-bg-white {% endif %}">
