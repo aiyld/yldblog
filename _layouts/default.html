@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{page.title}} | {{site.name}}</title>
     {% seo %}
-    <link rel="stylesheet" href="/assets/css/base.css">
-    <link rel="stylesheet" href="/assets/css/vendor.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/waifu.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/base.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/vendor.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/waifu.css">
     <link rel="shortcut icon" type="image/x-icon" href="/{{site.favicon}}">
     {% include tracking-header.html %}
     <script src="/assets/js/modernizr.js"></script>
@@ -54,8 +54,8 @@
     <!-- Java Script
     ================================================== -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/assets/js/plugins.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="{{site.baseurl}}/assets/js/plugins.js"></script>
+    <script src="{{site.baseurl}}/assets/js/main.js"></script>
     <script>
         var _hmt = _hmt || [];
         (function () {
@@ -67,9 +67,9 @@
         })();
     </script>
 
-    <script src="/assets/js/waifu-tips.js"></script>
-    <script src="/assets/js/live2d.js"></script>
-    <script type="text/javascript">initModel("/assets/waifu/")</script>
+    <script src="{{site.baseurl}}/assets/js/waifu-tips.js"></script>
+    <script src="{{site.baseurl}}/assets/js/live2d.js"></script>
+    <script type="text/javascript">initModel("{{site.baseurl}}/assets/waifu/")</script>
 </body>
 
 </html>
