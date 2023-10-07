@@ -1,6 +1,6 @@
 # Site
-name: 'YLD的个人网站'
-description: 'YLD’s zone。英文名Winter，也可以直接叫我YLD。天真执着的程序员，技术宅，技术痴，终日遨游于代码的星辰大海!'
+name: 'Winter Zone'
+description: 'Learn everything, just don't give up. 酌贪泉而觉爽，处涸辙以犹欢'
 logo: 'assets/images/mylogo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: '/yldblog'
@@ -22,11 +22,11 @@ articletypes: ["article", "quote", "video", "gallery", "audio", "link"]
 
 authors:
     yld:
-      name:           YLD
+      name:           Winter
       link:           author-yld
-      site:           https://www.yanglidong.com
+      site:           https://www.winterccc.com
       avatar:         assets/images/mylogo.png
-      bio:            "Hi, 我是YLD，英文名Winter。一个天真执着的程序员，技术宅，技术痴，终日遨游于代码的星辰大海!"
+      bio:            "Winter is coming"
       email:          aiyld@hotmail.com
       twitter:        https://twitter.com/yang_ld
       sina:           https://weibo.com/myyld
@@ -51,17 +51,17 @@ socials:
 rewards:
   btc:
     name: BTC
-    addr: "1GuUXQ8XQxAurvCBe4vM3qSkqs9ieenKpe"
+    addr: "1Q6ZDFC3FueXY3JocmeMqgiSsGGtppbvz2"
     logo: 'assets/images/btc.png'
     qr: 'assets/images/btc-qr.png'
   bch:
     name: BCH(CashAddr)
-    addr: "qzh8vl3yj29ecugq4fup027d3eqynaalaugvhmpvge"
+    addr: "qpa3lmppzg2zz3n53s9x7yeanparkeplwudhqa89g8"
     logo: 'assets/images/bch.jpg'
     qr: 'assets/images/bch-qr.png'
   ETH:
     name: ETH
-    addr: "0x2b3246b2f13e586839d9dcb173f5c6cffaf46930"
+    addr: "0xff6FC30033269845d196cB48F6a0660598D218D8"
     logo: 'assets/images/eth.png'
     qr: 'assets/images/eth-qr.png'
 
